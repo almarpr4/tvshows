@@ -1,4 +1,5 @@
 import React from "react";
+import ShowTile from "./ShowTile";
 
 function ShowListingPage({ shows }) {
     return (
@@ -16,69 +17,9 @@ function ShowListingPage({ shows }) {
         </section>
         <div className="container">
         <div className="row">
-          <div className="col-md-4">
-            <div className="card mb-4 box-shadow">
-              <img className="card-img-top" data-src=""
-                   src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
-                <div className="card-body">
-                  <div className="justify-content-center align-items-center">gggggggggfffgggggggggggggggggggg</div>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <small className="text-muted">Year: 2016</small>
-                    <small className="text-muted">Rating: 6.34</small>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card mb-4 box-shadow">
-              <img className="card-img-top" data-src=""
-                   src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
-              <div className="card-body">
-                <div className="justify-content-center align-items-center">ggggggfffffgggggggggg</div>
-                <div className="d-flex justify-content-between align-items-center">
-                  <small className="text-muted">Year: 2016</small>
-                  <small className="text-muted">Rating: 6.34</small>
-                </div>
-              </div>
-            </div>
-          </div>  <div className="col-md-4">
-          <div className="card mb-4 box-shadow">
-            <img className="card-img-top" data-src=""
-                 src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
-            <div className="card-body">
-              <div className="justify-content-center align-items-center">ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</div>
-              <div className="d-flex justify-content-between align-items-center">
-                <small className="text-muted">Year: 2016</small>
-                <small className="text-muted">Rating: 6.34</small>
-              </div>
-            </div>
-          </div>
-        </div>  <div className="col-md-4">
-          <div className="card mb-4 box-shadow">
-            <img className="card-img-top" data-src=""
-                 src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
-            <div className="card-body">
-              <div className="justify-content-center align-items-center">ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</div>
-              <div className="d-flex justify-content-between align-items-center">
-                <small className="text-muted">Year: 2016</small>
-                <small className="text-muted">Rating: 6.34</small>
-              </div>
-            </div>
-          </div>
-        </div>  <div className="col-md-4">
-          <div className="card mb-4 box-shadow">
-            <img className="card-img-top" data-src=""
-                 src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
-            <div className="card-body">
-              <div className="justify-content-center align-items-center">gggggggffg</div>
-              <div className="d-flex justify-content-between align-items-center">
-                <small className="text-muted">Year: 2016</small>
-                <small className="text-muted">Rating: 6.34</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
+            {shows.map((show, i) => (
+               <ShowTile key={i} {...show.show} />
+            ))}
         </div>
       </div>
       </>
@@ -86,3 +27,5 @@ function ShowListingPage({ shows }) {
 }
 
 export default ShowListingPage;
+
+
