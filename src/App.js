@@ -22,18 +22,64 @@ function App() {
               <img className="card-img-top" data-src=""
                    src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
                 <div className="card-body">
-                  <p className="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
+                  <div className="justify-content-center align-items-center">gggggggggfffgggggggggggggggggggg</div>
                   <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
+                    <small className="text-muted">Year: 2016</small>
+                    <small className="text-muted">Rating: 6.34</small>
                   </div>
                 </div>
             </div>
           </div>
+          <div className="col-md-4">
+            <div className="card mb-4 box-shadow">
+              <img className="card-img-top" data-src=""
+                   src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
+              <div className="card-body">
+                <div className="justify-content-center align-items-center">ggggggfffffgggggggggg</div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <small className="text-muted">Year: 2016</small>
+                  <small className="text-muted">Rating: 6.34</small>
+                </div>
+              </div>
+            </div>
+          </div>  <div className="col-md-4">
+          <div className="card mb-4 box-shadow">
+            <img className="card-img-top" data-src=""
+                 src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
+            <div className="card-body">
+              <div className="justify-content-center align-items-center">ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</div>
+              <div className="d-flex justify-content-between align-items-center">
+                <small className="text-muted">Year: 2016</small>
+                <small className="text-muted">Rating: 6.34</small>
+              </div>
+            </div>
+          </div>
+        </div>  <div className="col-md-4">
+          <div className="card mb-4 box-shadow">
+            <img className="card-img-top" data-src=""
+                 src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
+            <div className="card-body">
+              <div className="justify-content-center align-items-center">ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</div>
+              <div className="d-flex justify-content-between align-items-center">
+                <small className="text-muted">Year: 2016</small>
+                <small className="text-muted">Rating: 6.34</small>
+              </div>
+            </div>
+          </div>
+        </div>  <div className="col-md-4">
+          <div className="card mb-4 box-shadow">
+            <img className="card-img-top" data-src=""
+                 src="http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg" alt="Card image cap" />
+            <div className="card-body">
+              <div className="justify-content-center align-items-center">gggggggffg</div>
+              <div className="d-flex justify-content-between align-items-center">
+                <small className="text-muted">Year: 2016</small>
+                <small className="text-muted">Rating: 6.34</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
         </div>
       </div>
     </div>
