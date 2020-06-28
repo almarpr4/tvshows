@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Fetch from "../../network/Fetch";
 import 'bootstrap/dist/css/bootstrap.css';
+import ShowDetailMainImage from "./ShowDetailMainImage";
 
 function ShowDetailPage() {
   let { id } = useParams();
@@ -11,7 +12,7 @@ function ShowDetailPage() {
 }
 
 function RenderShowDetailPage({ data: show }) {
-  let { id, name, image, status, rating, summary, premiered } = show;
+  let { id, name, status, rating, summary, premiered } = show;
 
   return (
     <div className="container">
@@ -19,7 +20,7 @@ function RenderShowDetailPage({ data: show }) {
         <div className="container-fluid">
           <div className="wrapper row" datasrc={id}>
             <div className="preview col-md-6">
-              <img className="img-fluid" src={image.original} alt={id} />
+              <ShowDetailMainImage {...show} />  
             </div>
             <div className="details col-md-6">
               <h3 className="product-title">{name}</h3>
