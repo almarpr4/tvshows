@@ -1,31 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {useParams} from "react-router-dom";
+import Fetch from "../../network/Fetch";
 import 'bootstrap/dist/css/bootstrap.css';
 
 function ShowDetailPage() {
-  const [show, setShow] = useState();
   let {id} = useParams();
+  return (<Fetch uri={`http://api.tvmaze.com/shows/${id}`}
+         renderSuccess={RenderShowDetailPage} />);
 
-  useEffect(() => {
-    if (!id){
-      return;
-    }
-    fetch(`http://api.tvmaze.com/shows/${id}`)
-      .then(response => response.json())
-      .then(setShow)
-      .catch(console.error);
-  }, [id]);
-
-  if (show) {
-    return RenderShowDetailPage(show);
-  }
-  return null;
 }
 
-function RenderShowDetailPage(show){
+function RenderShowDetailPage({data: show}){
   let {id, name, image, status, rating, summary, premiered} = show;
-
-
 
   return (
       <div className="container">
