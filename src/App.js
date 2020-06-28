@@ -4,9 +4,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import ShowListingPage from "./components/PLP/ShowListingPage";
 import 'bootstrap/dist/css/bootstrap.css';
-import showData from './movies.json'
+import ShowListingPage from "./components/PLP/ShowListingPage";
 import ShowDetailPage from "./components/PDP/ShowDetailPage";
 
 export default function App() {
@@ -15,7 +14,7 @@ export default function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <ShowListingPage shows={showData} />
+            <ShowListingPage />
           </Route>
           <Route path="/detail/:id" children={<ShowDetailPage />} />
         </Switch>
