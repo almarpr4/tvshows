@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import showData from './movies.json'
 import ShowDetailPage from "./components/PDP/ShowDetailPage";
 
-export default function BasicExample() {
+export default function App() {
   return (
     <Router>
       <div className="App">
@@ -24,32 +24,5 @@ export default function BasicExample() {
         </Switch>
       </div>
     </Router>
-  );
-}
-
-// You can think of these components as "pages"
-// in your app.
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
   );
 }
