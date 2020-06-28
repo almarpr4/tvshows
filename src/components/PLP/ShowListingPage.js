@@ -1,27 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ShowTile from "./ShowTile";
+import Fetch from "../../network/Fetch";
 
 function ShowListingPage({ text = 'girls' }) {
-  const [shows, setShows] = useState();
-
-  useEffect(() => {
-    if (!text){
-        return;
-    }
-    fetch(`http://api.tvmaze.com/search/shows?q=${text}`)
-      .then(response => response.json())
-      .then(setShows)
-      .catch(console.error);
-  }, [text]);
-
-  if (shows){
-     return RenderShowListingPage(shows)
-   }
-
-  return null;
+    return ( <Fetch uri={`http://api.tvmaze.com/search/shows?q=${text}`}
+                    renderSuccess={RenderShowListingPage}
+    />);
 }
 
-function RenderShowListingPage(shows){
+function RenderShowListingPage({data: shows}){
         return (
             <div className="container">
             <div className="row">
