@@ -3,7 +3,7 @@ import ShowTile from "./ShowTile";
 import Fetch from "../../network/Fetch";
 
 function ShowListingPage({ text = 'girls' }) {
-    return (<Fetch uri={`http://api.tvmaze.com/search/shows?q=${text}`}
+    return (<Fetch uri={`https://api.tvmaze.com/search/shows?q=${text}`}
         renderSuccess={RenderShowListingPage}
     />);
 }

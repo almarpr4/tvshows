@@ -7,7 +7,7 @@ import ShowDetailInfo from "./ShowDetailInfo";
 
 function ShowDetailPage() {
   let { id } = useParams();
-  return (<Fetch uri={`http://api.tvmaze.com/shows/${id}`}
+  return (<Fetch uri={`https://api.tvmaze.com/shows/${id}`}
     renderSuccess={RenderShowDetailPage} />);
 
 }
