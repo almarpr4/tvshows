@@ -24,6 +24,9 @@ function ShowDetailPage() {
 
 function RenderShowDetailPage(show){
   let {id, name, image, network, status, rating, schedule, summary, premiered} = show;
+
+
+
   return (
       <div className="container">
         <div className="card">
@@ -35,7 +38,7 @@ function RenderShowDetailPage(show){
               <div className="details col-md-6">
                 <h3 className="product-title">{name}</h3>
                 <p>Premiered: {premiered}</p>
-                <p className="product-description">{summary.replace(/(<([^>]+)>)/ig, "")}</p>
+                <p className="product-description">{sanitizeSummary(summary)}</p>
                 <p className="review-no">Rating: {rating.average}</p>
                 <p>Status: {status}</p>
 
@@ -46,4 +49,11 @@ function RenderShowDetailPage(show){
       </div>
   );
 }
+
+function sanitizeSummary(summary) {
+  if (summary == null) return '';
+  return summary.replace(/(<([^>]+)>)/ig, "");
+}
+
+
 export default ShowDetailPage;
