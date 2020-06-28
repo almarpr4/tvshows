@@ -25,11 +25,6 @@ function ShowDetailPage() {
 function RenderShowDetailPage(show){
   let {id, name, image, network, status, rating, schedule, summary, premiered} = show;
   return (
-    <>
-      <section className="jumbotron text-center">
-        <div className="container">
-        </div>
-      </section>
       <div className="container">
         <div className="card">
           <div className="container-fluid">
@@ -49,7 +44,6 @@ function RenderShowDetailPage(show){
           </div>
         </div>
       </div>
-    </>
   );
 }
 export default ShowDetailPage;
