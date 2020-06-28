@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import {FaSearch, FaTimes} from 'react-icons/fa'
 
-function HeaderComponent(){
+
+function HeaderComponent({onhandleSearchClick}){
+
   return (<section className="jumbotron text-center">
     <div className="container">
       <h1 className="jumbotron-heading">Show catalog</h1>
-      <input
-        className="text-center"
-        type="text"
-        placeholder="Search"
-      />
+      <form onSubmit={onhandleSearchClick}>
+        <input
+          placeholder="Search books..."
+          id="search"
+          type="search"
+          css={{width: '100%'}}
+        />
+          <label htmlFor="search">
+            <button
+              type="submit"
+              css={{
+                border: '0',
+                position: 'relative',
+                marginLeft: '-35px',
+                background: 'transparent',
+              }}
+            >
+            <FaSearch aria-label="search" />
+            </button>
+          </label>
+      </form>
     </div>
   </section>)
 }
+
 
 export default HeaderComponent;
