@@ -23,7 +23,7 @@ function ShowDetailPage() {
 }
 
 function RenderShowDetailPage(show){
-  let {id, name, image, network, status, rating, schedule, summary, premiered} = show;
+  let {id, name, image, status, rating, summary, premiered} = show;
 
 
 
@@ -33,7 +33,7 @@ function RenderShowDetailPage(show){
           <div className="container-fluid">
             <div className="wrapper row" datasrc={id}>
               <div className="preview col-md-6">
-                <img className="img-fluid" src={image.original}/>
+                <img className="img-fluid" src={image.original} alt={id} />
               </div>
               <div className="details col-md-6">
                 <h3 className="product-title">{name}</h3>

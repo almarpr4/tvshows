@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {FaSearch, FaTimes} from 'react-icons/fa'
+import React from "react";
+import {FaSearch} from 'react-icons/fa'
 
 
 function HeaderComponent({onhandleSearchClick}){
