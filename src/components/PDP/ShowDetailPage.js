@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Fetch from "../../network/Fetch";
 import 'bootstrap/dist/css/bootstrap.css';
 import ShowDetailMainImage from "./ShowDetailMainImage";
+import ShowDetailInfo from "./ShowDetailInfo";
 
 function ShowDetailPage() {
   let { id } = useParams();
@@ -12,23 +13,16 @@ function ShowDetailPage() {
 }
 
 function RenderShowDetailPage({ data: show }) {
-  let { id, name, status, rating, summary, premiered } = show;
-
   return (
     <div className="container">
       <div className="card">
         <div className="container-fluid">
-          <div className="wrapper row" datasrc={id}>
+          <div className="wrapper row" datasrc={show.id}>
             <div className="preview col-md-6">
-              <ShowDetailMainImage {...show} />  
+              <ShowDetailMainImage {...show} />
             </div>
             <div className="details col-md-6">
-              <h3 className="product-title">{name}</h3>
-              <p>Premiered: {premiered}</p>
-              <p className="product-description">{sanitizeSummary(summary)}</p>
-              <p className="review-no">Rating: {rating.average}</p>
-              <p>Status: {status}</p>
-
+              <ShowDetailInfo {...show} />
             </div>
           </div>
         </div>
@@ -37,10 +31,6 @@ function RenderShowDetailPage({ data: show }) {
   );
 }
 
-function sanitizeSummary(summary) {
-  if (summary == null) return '';
-  return summary.replace(/(<([^>]+)>)/ig, "");
-}
 
 
 export default ShowDetailPage;
