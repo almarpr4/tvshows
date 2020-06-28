@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import ShowTile from "./ShowTile";
 
-function ShowListingPage({ text }) {
+function ShowListingPage({ text = 'girls' }) {
   const [shows, setShows] = useState();
 
   useEffect(() => {
     if (!text){
-        text = 'girls';
+        return;
     }
     fetch(`http://api.tvmaze.com/search/shows?q=${text}`)
       .then(response => response.json())
