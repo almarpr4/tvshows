@@ -10,21 +10,19 @@ import ShowDetailPage from "./components/PDP/ShowDetailPage";
 import HeaderComponent from "./components/Header/HeaderComponent";
 
 export default function App() {
-
   const [query, setQuery] = useState();
 
   function handleSearchClick(event) {
     event.preventDefault()
     setQuery(event.target.elements.search.value);
-    console.log("header"+query);
   }
 
   return (
     <Router>
       <div className="App">
-        <HeaderComponent onhandleSearchClick={handleSearchClick}/>
         <Switch>
           <Route exact path="/">
+            <HeaderComponent onhandleSearchClick={handleSearchClick}/>
             <ShowListingPage text={query}/>
           </Route>
           <Route path="/detail/:id" children={<ShowDetailPage />} />
