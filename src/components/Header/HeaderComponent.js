@@ -7,7 +7,7 @@ function HeaderComponent({ onhandleSearchClick }) {
   return (<section className="jumbotron text-center">
     <div className="container">
       <h1 className="jumbotron-heading">Show catalog</h1>
-      <form onSubmit={onhandleSearchClick}>
+      <form onSubmit={onhandleSearchClick} data-testid="form-text-search">
         <input
           placeholder="Search shows..."
           id="search"
