@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,8 +22,8 @@ export default function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <HeaderComponent onhandleSearchClick={handleSearchClick}/>
-            <ShowListingPage text={query}/>
+            <HeaderComponent onhandleSearchClick={handleSearchClick} />
+            <ShowListingPage text={query} />
           </Route>
           <Route path="/detail/:id" children={<ShowDetailPage />} />
         </Switch>

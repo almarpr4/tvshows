@@ -1,8 +1,8 @@
 import React from "react";
-import {FaSearch} from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa'
 
 
-function HeaderComponent({onhandleSearchClick}){
+function HeaderComponent({ onhandleSearchClick }) {
 
   return (<section className="jumbotron text-center">
     <div className="container">
@@ -12,21 +12,21 @@ function HeaderComponent({onhandleSearchClick}){
           placeholder="Search books..."
           id="search"
           type="search"
-          css={{width: '100%'}}
+          css={{ width: '100%' }}
         />
-          <label htmlFor="search">
-            <button
-              type="submit"
-              css={{
-                border: '0',
-                position: 'relative',
-                marginLeft: '-35px',
-                background: 'transparent',
-              }}
-            >
+        <label htmlFor="search">
+          <button
+            type="submit"
+            css={{
+              border: '0',
+              position: 'relative',
+              marginLeft: '-35px',
+              background: 'transparent',
+            }}
+          >
             <FaSearch aria-label="search" />
-            </button>
-          </label>
+          </button>
+        </label>
       </form>
     </div>
   </section>)
