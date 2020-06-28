@@ -18,9 +18,7 @@ export default function App() {
           <Route exact path="/">
             <ShowListingPage shows={showData} />
           </Route>
-          <Route path="/detail">
-            <ShowDetailPage />
-          </Route>
+          <Route path="/detail/:id" children={<ShowDetailPage />} />
         </Switch>
       </div>
     </Router>

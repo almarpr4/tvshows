@@ -1,10 +1,12 @@
 import React from "react";
-
+import {useParams} from "react-router-dom";
 
 function ShowDetailPage() {
+  let {id} = useParams();
+
   return (
     <div>
-      <h1>[ShowDetailPage]</h1>
+      <h3>Show ID: {id}</h3>
     </div>
   );
 }
