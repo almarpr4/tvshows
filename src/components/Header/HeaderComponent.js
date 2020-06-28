@@ -9,7 +9,7 @@ function HeaderComponent({ onhandleSearchClick }) {
       <h1 className="jumbotron-heading">Show catalog</h1>
       <form onSubmit={onhandleSearchClick}>
         <input
-          placeholder="Search books..."
+          placeholder="Search shows..."
           id="search"
           type="search"
           css={{ width: '100%' }}
