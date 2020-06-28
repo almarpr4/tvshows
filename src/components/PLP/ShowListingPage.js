@@ -4,16 +4,15 @@ import ShowTile from "./ShowTile";
 function ShowListingPage({ text }) {
   const [shows, setShows] = useState();
 
-  let textToQuery = text;
   useEffect(() => {
     if (!text){
-        textToQuery = 'girls';
+        text = 'girls';
     }
-    fetch(`http://api.tvmaze.com/search/shows?q=${textToQuery}`)
+    fetch(`http://api.tvmaze.com/search/shows?q=${text}`)
       .then(response => response.json())
       .then(setShows)
       .catch(console.error);
-  }, [textToQuery]);
+  }, [text]);
 
   if (shows){
      return RenderShowListingPage(shows)
