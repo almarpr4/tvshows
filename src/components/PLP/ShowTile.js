@@ -8,7 +8,7 @@ function ShowTile({ id = '', name = '', premiered = '', rating = {}, image = {} 
     <div className="col-md-4">
       <Link to={`/detail/${id}`}>
         <div className="card mb-4 box-shadow">
-          <img className="card-img-top" data-src={id} alt={id} src={image.medium} />
+          <img className="card-img-top" data-src={id} alt={id} src={image?.medium} />
           <div className="card-body">
             <div className="justify-content-center align-items-center">{name}</div>
             <div className="d-flex justify-content-between align-items-center">
